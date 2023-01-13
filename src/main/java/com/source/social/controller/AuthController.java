@@ -1,20 +1,19 @@
 package com.source.social.controller;
 
 
+import com.source.social.dto.AuthenticationResponse;
 import com.source.social.dto.LoginRequest;
 import com.source.social.dto.RegisterRequest;
 import com.source.social.service.AuthService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 @RequestMapping("/api/auth")
 @AllArgsConstructor
 public class AuthController {
-
 
     private final AuthService authService;
 
@@ -32,8 +31,8 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public void login(@RequestBody LoginRequest loginRequest){
-
+    public AuthenticationResponse login(@RequestBody LoginRequest loginRequest){
+        return authService.login(loginRequest);
     }
 
 }

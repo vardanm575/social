@@ -1,5 +1,6 @@
 package com.source.social.dto;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,8 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoginRequest {
-
+public class AuthenticationResponse {
+    private String authenticationToken;
     private String username;
-    private String password;
 }
