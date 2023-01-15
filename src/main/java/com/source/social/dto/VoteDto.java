@@ -1,5 +1,6 @@
 package com.source.social.dto;
 
+import com.source.social.model.VoteType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,9 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterRequest {
-    private String email;
-    private String username;
-    private String password;
-
+public class VoteDto {
+    private VoteType voteType;
+    private Long postId;
 }

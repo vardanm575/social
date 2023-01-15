@@ -1,5 +1,6 @@
 package com.source.social.repository;
 
+
 import com.source.social.model.RefreshToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 
